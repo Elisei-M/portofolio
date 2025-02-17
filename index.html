@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header cu navigare și buton de schimbare a limbii -->
+  <!-- Header cu navigație și buton de schimbare a limbii -->
   <header>
     <nav>
       <ul>
         <li><a href="#home" data-key="navHome">Home</a></li>
         <li><a href="#about" data-key="navAbout">About</a></li>
+        <li><a href="#experience" data-key="navExperience">Experience</a></li>
         <li><a href="#projects" data-key="navProjects">Projects</a></li>
         <li><a href="#contact" data-key="navContact">Contact</a></li>
       </ul>
@@ -22,42 +23,66 @@
 
   <!-- Secțiunea Home -->
   <section id="home">
-    <h1 data-key="homeTitle">Welcome to my Portfolio!</h1>
-    <p data-key="homeIntro">
-      I am [Your Name], a passionate web developer. Here you can find my projects, skills, and experiences.
-    </p>
+    <div class="hero">
+      <h1 data-key="homeTitle">Welcome to My Portfolio!</h1>
+      <p data-key="homeSubtitle">I'm [Your Name], a passionate web developer.</p>
+    </div>
   </section>
 
   <!-- Secțiunea About -->
   <section id="about">
     <h2 data-key="aboutTitle">About Me</h2>
-    <p data-key="aboutText">
-      I specialize in front-end development using HTML, CSS, and JavaScript. I love creating beautiful and functional web applications.
-    </p>
+    <div class="about-content">
+      <img src="your-photo.jpg" alt="Your Photo" class="profile-img" />
+      <p data-key="aboutText">
+        I am a web developer with experience in HTML, CSS, JavaScript, and modern frameworks. I love creating interactive and responsive web applications.
+      </p>
+    </div>
+  </section>
+
+  <!-- Secțiunea Experience -->
+  <section id="experience">
+    <h2 data-key="experienceTitle">Experience</h2>
+    <div class="experience-list">
+      <div class="experience-item">
+        <h3 data-key="exp1Title">Web Developer at Company A</h3>
+        <span data-key="exp1Duration">Jan 2020 - Present</span>
+        <p data-key="exp1Desc">Working on front-end development, building responsive interfaces and enhancing user experience.</p>
+      </div>
+      <div class="experience-item">
+        <h3 data-key="exp2Title">Intern at Company B</h3>
+        <span data-key="exp2Duration">Jun 2019 - Dec 2019</span>
+        <p data-key="exp2Desc">Assisted in web application development and learned full-stack development skills.</p>
+      </div>
+      <!-- Poți adăuga mai multe experiențe după nevoie -->
+    </div>
   </section>
 
   <!-- Secțiunea Projects -->
   <section id="projects">
-    <h2 data-key="projectsTitle">My Projects</h2>
+    <h2 data-key="projectsTitle">Projects</h2>
     <div class="projects-grid">
-      <!-- Exemplu de proiect. Poți adăuga mai multe carduri de proiect. -->
       <div class="project-card">
-        <img src="project1-thumbnail.jpg" alt="Project 1" />
+        <img src="project1-thumbnail.jpg" alt="Project One" />
         <h3 data-key="project1Title">Project One</h3>
-        <p data-key="project1Desc">
-          A brief description of Project One.
-        </p>
-        <a href="https://yourprojectlink.com" target="_blank" data-key="project1Link">View Project</a>
+        <p data-key="project1Desc">A brief description of Project One.</p>
+        <a href="https://yourproject1link.com" target="_blank" data-key="project1Link">View Project</a>
       </div>
-      <!-- Adaugă alte proiecte similare aici -->
+      <div class="project-card">
+        <img src="project2-thumbnail.jpg" alt="Project Two" />
+        <h3 data-key="project2Title">Project Two</h3>
+        <p data-key="project2Desc">A brief description of Project Two.</p>
+        <a href="https://yourproject2link.com" target="_blank" data-key="project2Link">View Project</a>
+      </div>
+      <!-- Adaugă mai multe proiecte după necesități -->
     </div>
   </section>
 
   <!-- Secțiunea Contact -->
   <section id="contact">
-    <h2 data-key="contactTitle">Contact Me</h2>
+    <h2 data-key="contactTitle">Contact</h2>
     <p data-key="contactText">
-      Feel free to reach out via email at <a href="mailto:youremail@example.com">youremail@example.com</a> or follow me on social media.
+      Feel free to reach out via email at <a href="mailto:youremail@example.com">youremail@example.com</a> or connect with me on social media.
     </p>
   </section>
 

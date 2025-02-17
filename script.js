@@ -2,6 +2,7 @@
 const translations = {
   en: {
     pageTitle: "My Portfolio",
+    navLogo: "YourName",
     navHome: "Home",
     navAbout: "About",
     navExperience: "Experience",
@@ -27,10 +28,11 @@ const translations = {
     project2Link: "View Project",
     contactTitle: "Contact",
     contactText: "Feel free to reach out via email at youremail@example.com or connect with me on social media.",
-    footerText: "Created by [Your Name]."
+    footerText: "Created by [Your Name]. | GitHub Profile"
   },
   ro: {
     pageTitle: "Portofoliul Meu",
+    navLogo: "NumeleTău",
     navHome: "Acasă",
     navAbout: "Despre mine",
     navExperience: "Experiență",
@@ -56,7 +58,7 @@ const translations = {
     project2Link: "Vezi Proiectul",
     contactTitle: "Contact",
     contactText: "Nu ezita să mă contactezi prin email la youremail@example.com sau pe rețelele sociale.",
-    footerText: "Creat de [Numele Tău]."
+    footerText: "Creat de [Numele Tău]. | Profil GitHub"
   }
 };
 

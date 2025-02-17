@@ -5,20 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title data-key="pageTitle">My Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Dacă folosești Font Awesome pentru iconița hamburger, adaugă link-ul aici -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" /> -->
 </head>
 <body>
-  <!-- Header cu navigație și buton de schimbare a limbii -->
+  <!-- Navbar -->
   <header>
-    <nav>
-      <ul>
+    <nav class="navbar">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="#" data-key="navLogo">YourName</a>
+      </div>
+      <!-- Navigation links -->
+      <ul class="nav-links">
         <li><a href="#home" data-key="navHome">Home</a></li>
         <li><a href="#about" data-key="navAbout">About</a></li>
         <li><a href="#experience" data-key="navExperience">Experience</a></li>
         <li><a href="#projects" data-key="navProjects">Projects</a></li>
         <li><a href="#contact" data-key="navContact">Contact</a></li>
       </ul>
+      <!-- Hamburger icon pentru mobil -->
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <!-- Buton de schimbare a limbii -->
+      <button id="lang-toggle">Română</button>
     </nav>
-    <button id="lang-toggle">Română</button>
   </header>
 
   <!-- Secțiunea Home -->
@@ -47,14 +61,18 @@
       <div class="experience-item">
         <h3 data-key="exp1Title">Web Developer at Company A</h3>
         <span data-key="exp1Duration">Jan 2020 - Present</span>
-        <p data-key="exp1Desc">Working on front-end development, building responsive interfaces and enhancing user experience.</p>
+        <p data-key="exp1Desc">
+          Working on front-end development, building responsive interfaces and enhancing user experience.
+        </p>
       </div>
       <div class="experience-item">
         <h3 data-key="exp2Title">Intern at Company B</h3>
         <span data-key="exp2Duration">Jun 2019 - Dec 2019</span>
-        <p data-key="exp2Desc">Assisted in web application development and learned full-stack development skills.</p>
+        <p data-key="exp2Desc">
+          Assisted in web application development and learned full-stack development skills.
+        </p>
       </div>
-      <!-- Poți adăuga mai multe experiențe după nevoie -->
+      <!-- Adaugă mai multe experiențe după necesitate -->
     </div>
   </section>
 
@@ -74,7 +92,7 @@
         <p data-key="project2Desc">A brief description of Project Two.</p>
         <a href="https://yourproject2link.com" target="_blank" data-key="project2Link">View Project</a>
       </div>
-      <!-- Adaugă mai multe proiecte după necesități -->
+      <!-- Adaugă mai multe proiecte după necesitate -->
     </div>
   </section>
 
@@ -88,9 +106,20 @@
 
   <!-- Footer -->
   <footer>
-    <p data-key="footerText">Created by [Your Name]. | <a href="https://github.com/your-github" target="_blank">GitHub Profile</a></p>
+    <p data-key="footerText">
+      Created by [Your Name]. | <a href="https://github.com/your-github" target="_blank">GitHub Profile</a>
+    </p>
   </footer>
 
+  <!-- Script pentru funcționalitatea limbii -->
   <script src="script.js"></script>
+  <!-- Script pentru toggle-ul hamburger -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

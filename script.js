@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Inițial (limba EN)
+  // Inițial (EN)
   updateSiteText("EN");
 
   // Toggle limbă

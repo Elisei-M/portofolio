@@ -4,13 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyPortfolio - Bilingual</title>
-
-    <!-- Devicon (pentru iconițe limbaje / tool-uri, dacă vrei) -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
-    <!-- Font Awesome (pentru iconițele din navbar) -->
+    <!-- Link către fișierul CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- CDN Font Awesome pentru iconițe -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -18,12 +14,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <!-- Fișierul local CSS -->
-    <link rel="stylesheet" href="styles.css" />
+    <!-- Font Lato pentru animație și semnătură -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
   </head>
   <body>
-    <!-- Navbar (din pen-ul NPWxxge) -->
+    <!-- Navbar -->
     <nav class="navbar">
       <div class="navbar-container">
         <a href="#" class="logo">MyPortfolio</a>
@@ -68,11 +63,11 @@
       </div>
     </nav>
 
-    <!-- Home + About Me (din pen-ul NPWxxge) -->
+    <!-- Conținut principal (animat) -->
     <div class="main-content" id="home">
       <div class="content">
         <div class="content__container">
-          <!-- Text animat: [Hello ... I'm ...] -->
+          <!-- Blocul animat: [Hello world !] I'm -->
           <p class="content__container__text">
             <span class="animated-wrapper">
               <span class="static-text">Hello</span>
@@ -89,11 +84,10 @@
           </p>
           <!-- Semnătură (linia următoare) -->
           <p class="signature">
-            <br />
+            <br>
             <span class="signature-name">Manole Elisei.</span>
           </p>
-
-          <!-- Secțiunea About Me -->
+          <!-- Secțiunea "Despre mine" -->
           <div class="about-me" id="about">
             <p class="about-text">
               Sunt un full stack developer pasionat de tehnologie, cu expertiză în front-end și back-end. Îmi plac provocările care mă determină să inovez și să evoluez constant.
@@ -104,13 +98,14 @@
       </div>
     </div>
 
-    <!-- Secțiunea Skills (din pen-ul MYWKyRr) imediat după About Me -->
+    <!-- Secțiunea Skills -->
     <section class="skills-section" id="skills">
       <h2 class="section-title skills-title">&lt;/Skills&gt;</h2>
       <div class="skills-container">
+        <!-- Conținutul textului -->
         <div class="skills-content">
           <p class="skills-p1">
-            Salut! Numele meu este Elisei M. și sunt full stack developer. Test
+            Salut! Numele meu este Elisei M. și sunt full stack developer.
             Îmi place să creez aplicații web de la zero și să le aduc la viață 
             în browser. Lucrul atât cu front-end cât și cu back-end mi-a oferit 
             o perspectivă completă asupra procesului de dezvoltare.
@@ -125,10 +120,12 @@
             cunoștințelor cu alți pasionați de tehnologie.
           </p>
         </div>
+        
+        <!-- Imaginea / avatarul -->
         <div class="skills-image">
-          <img
-            src="https://via.placeholder.com/300x400"
-            alt="Profil Elisei M."
+          <img 
+            src="https://via.placeholder.com/300x400" 
+            alt="Profil Elisei M." 
           />
         </div>
       </div>
@@ -137,12 +134,11 @@
     <!-- Footer -->
     <footer>
       <p>
-        Created by Elisei M. |
-        <a href="https://github.com/elisei-m" target="_blank">GitHub Profile</a>
+        Created by Elisei M. | <a href="https://github.com/elisei-m" target="_blank">GitHub Profile</a>
       </p>
     </footer>
 
-    <!-- Script local -->
+    <!-- Scriptul JavaScript -->
     <script src="script.js"></script>
   </body>
 </html>

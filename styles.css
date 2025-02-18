@@ -234,11 +234,11 @@ body {
   box-shadow: 0 5px 15px rgba(22, 160, 133, 0.4);
 }
 
-/* Skills */
+/* Secțiunea Skills (din pen-ul MYWKyRr) */
 .skills-section {
   width: 100%;
   padding: 60px 40px;
-  background-color: #1e1e1e;
+  background-color: #1e1e1e; /* fundal închis */
   color: #ecf0f1;
   margin-top: 40px;
 }

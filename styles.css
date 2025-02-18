@@ -89,12 +89,12 @@ body {
   color: #0d2538;
 }
 
-/* Main Content */
+/* Main Content (aliniere la stânga, aspect modern) */
 .main-content {
-  padding: 120px 40px 20px;
+  padding: 120px 40px 20px; /* spațiu pentru navbar, plus margine la stânga */
   max-width: 1200px;
   margin: 0 auto;
-  text-align: left;
+  text-align: left; /* aliniere la stânga */
 }
 
 .content {
@@ -113,7 +113,7 @@ body {
   position: relative;
 }
 
-/* Animare: [Hello ... I'm ...] */
+/* Blocul animat: [Hello world !] I'm */
 .animated-wrapper {
   display: inline;
   white-space: nowrap;
@@ -157,7 +157,7 @@ body {
   line-height: 40px;
 }
 
-/* Keyframes */
+/* Keyframes pentru paranteze și text animat */
 @keyframes opacity {
   0%, 100% { opacity: 0; }
   50% { opacity: 1; }
@@ -172,7 +172,7 @@ body {
   83.3%, 95.96% { transform: translateY(-40px); }
 }
 
-/* Semnătură */
+/* Semnătură (Manole Elisei.) */
 .signature {
   font-family: 'Lato', sans-serif;
   font-size: 30px;
@@ -204,7 +204,7 @@ body {
   100% { color: #ecf0f1; }
 }
 
-/* About Me */
+/* Secțiunea "Despre mine" */
 .about-me {
   margin-top: 30px;
   text-align: left;
@@ -234,31 +234,32 @@ body {
   box-shadow: 0 5px 15px rgba(22, 160, 133, 0.4);
 }
 
-/* Skills (din pen-ul MYWKyRr) */
+/* Secțiunea Skills */
 .skills-section {
   width: 100%;
   padding: 60px 40px;
-  background-color: #1e1e1e;
-  color: #ecf0f1;
+  background-color: #1e1e1e; /* fundal închis */
+  color: #ecf0f1;           /* text deschis */
   margin-top: 40px;
 }
 
-.skills-title {
+.section-title {
   font-family: 'Lato', sans-serif;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 30px;
-  color: #16a085;
+  color: #16a085; /* culoare de accent */
   text-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
 .skills-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* pentru responsive */
   gap: 40px;
   align-items: center;
 }
 
+/* Conținutul textului din Skills */
 .skills-content {
   flex: 1;
   max-width: 600px;
@@ -270,6 +271,7 @@ body {
   margin-bottom: 1rem;
 }
 
+/* Imaginea din Skills */
 .skills-image {
   flex: 1;
   display: flex;
@@ -316,6 +318,7 @@ footer a:hover {
   color: #0056b3;
 }
 
+/* Dark mode footer (opțional) */
 body.dark footer {
   background-color: #444;
   color: #eee;

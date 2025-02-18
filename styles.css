@@ -157,7 +157,7 @@ body {
   line-height: 40px;
 }
 
-/* Keyframes */
+/* Keyframes anim */
 @keyframes opacity {
   0%, 100% { opacity: 0; }
   50% { opacity: 1; }
@@ -234,11 +234,11 @@ body {
   box-shadow: 0 5px 15px rgba(22, 160, 133, 0.4);
 }
 
-/* Secțiunea Skills (din pen-ul MYWKyRr) */
+/* Skills (din pen-ul MYWKyRr) */
 .skills-section {
   width: 100%;
   padding: 60px 40px;
-  background-color: #1e1e1e; /* fundal închis */
+  background-color: #1e1e1e;
   color: #ecf0f1;
   margin-top: 40px;
 }

@@ -1,83 +1,102 @@
-// Obiect de traduceri
-const translations = {
-  en: {
-    pageTitle: "My Portfolio",
-    navLogo: "YourName",
-    navHome: "Home",
-    navAbout: "About",
-    navExperience: "Experience",
-    navProjects: "Projects",
-    navContact: "Contact",
-    homeTitle: "Welcome to My Portfolio!",
-    homeSubtitle: "I'm [Your Name], a passionate web developer.",
-    aboutTitle: "About Me",
-    aboutText: "I am a web developer with experience in HTML, CSS, JavaScript, and modern frameworks. I love creating interactive and responsive web applications.",
-    experienceTitle: "Experience",
-    exp1Title: "Web Developer at Company A",
-    exp1Duration: "Jan 2020 - Present",
-    exp1Desc: "Working on front-end development, building responsive interfaces and enhancing user experience.",
-    exp2Title: "Intern at Company B",
-    exp2Duration: "Jun 2019 - Dec 2019",
-    exp2Desc: "Assisted in web application development and learned full-stack development skills.",
-    projectsTitle: "Projects",
-    project1Title: "Project One",
-    project1Desc: "A brief description of Project One.",
-    project1Link: "View Project",
-    project2Title: "Project Two",
-    project2Desc: "A brief description of Project Two.",
-    project2Link: "View Project",
-    contactTitle: "Contact",
-    contactText: "Feel free to reach out via email at youremail@example.com or connect with me on social media.",
-    footerText: "Created by [Your Name]. | GitHub Profile"
-  },
-  ro: {
-    pageTitle: "Portofoliul Meu",
-    navLogo: "NumeleTău",
-    navHome: "Acasă",
-    navAbout: "Despre mine",
-    navExperience: "Experiență",
-    navProjects: "Proiecte",
-    navContact: "Contact",
-    homeTitle: "Bine ai venit la Portofoliul Meu!",
-    homeSubtitle: "Sunt [Numele Tău], un dezvoltator web pasionat.",
-    aboutTitle: "Despre mine",
-    aboutText: "Sunt dezvoltator web cu experiență în HTML, CSS, JavaScript și framework-uri moderne. Îmi place să creez aplicații web interactive și responsive.",
-    experienceTitle: "Experiență",
-    exp1Title: "Dezvoltator Web la Compania A",
-    exp1Duration: "Ian 2020 - Prezent",
-    exp1Desc: "Lucrez la dezvoltarea front-end, creând interfețe responsive și îmbunătățind experiența utilizatorilor.",
-    exp2Title: "Intern la Compania B",
-    exp2Duration: "Iun 2019 - Dec 2019",
-    exp2Desc: "Am asistat la dezvoltarea aplicațiilor web și am învățat abilități de dezvoltare full-stack.",
-    projectsTitle: "Proiecte",
-    project1Title: "Proiectul Unu",
-    project1Desc: "O scurtă descriere a Proiectului Unu.",
-    project1Link: "Vezi Proiectul",
-    project2Title: "Proiectul Doi",
-    project2Desc: "O scurtă descriere a Proiectului Doi.",
-    project2Link: "Vezi Proiectul",
-    contactTitle: "Contact",
-    contactText: "Nu ezita să mă contactezi prin email la youremail@example.com sau pe rețelele sociale.",
-    footerText: "Creat de [Numele Tău]. | Profil GitHub"
+document.addEventListener("DOMContentLoaded", function () {
+  // Buton limbă
+  const langToggle = document.querySelector(".lang-toggle");
+  const langText = document.querySelector(".lang-text");
+
+  // Navbar
+  const navHome = document.querySelector(".nav-home");
+  const navAbout = document.querySelector(".nav-about");
+  const navSkills = document.querySelector(".nav-skills");
+  const navProjects = document.querySelector(".nav-projects");
+  const navContact = document.querySelector(".nav-contact");
+
+  // Text animat
+  const staticText = document.querySelector(".static-text");
+  const dynamicItems = document.querySelectorAll(".dynamic-list__item");
+  const imText = document.querySelector(".im-text");
+
+  // About Me
+  const aboutText = document.querySelector(".about-text");
+  const talkBtn = document.querySelector(".talk-btn");
+
+  // Skills
+  const skillsTitle = document.querySelector(".skills-title");
+  const skillsP1 = document.querySelector(".skills-p1");
+  const skillsP2 = document.querySelector(".skills-p2");
+  const skillsP3 = document.querySelector(".skills-p3");
+
+  function updateSiteText(lang) {
+    // 1. Navbar
+    if (lang === "RO") {
+      navHome.textContent = "Acasă";
+      navAbout.textContent = "Despre mine";
+      navSkills.textContent = "Abilități";
+      navProjects.textContent = "Proiecte";
+      navContact.textContent = "Contact";
+    } else {
+      navHome.textContent = "Home";
+      navAbout.textContent = "About Me";
+      navSkills.textContent = "Skills";
+      navProjects.textContent = "Projects";
+      navContact.textContent = "Contact";
+    }
+
+    // 2. Text animat
+    if (lang === "RO") {
+      staticText.textContent = "Salut";
+      dynamicItems[0].textContent = "lume !";
+      dynamicItems[1].textContent = "bob !";
+      dynamicItems[2].textContent = "utilizatori !";
+      dynamicItems[3].textContent = "toți !";
+      imText.textContent = "Sunt";
+    } else {
+      staticText.textContent = "Hello";
+      dynamicItems[0].textContent = "world !";
+      dynamicItems[1].textContent = "bob !";
+      dynamicItems[2].textContent = "users !";
+      dynamicItems[3].textContent = "everybody !";
+      imText.textContent = "I'm";
+    }
+    // Repornim animația
+    const dynamicList = document.querySelector(".dynamic-list");
+    dynamicList.style.animation = "none";
+    void dynamicList.offsetWidth;
+    dynamicList.style.animation = "";
+
+    // 3. About Me
+    if (lang === "RO") {
+      aboutText.textContent = "Sunt un full stack developer pasionat de tehnologie, cu expertiză în front-end și back-end. Îmi plac provocările care mă determină să inovez și să evoluez constant.";
+      talkBtn.textContent = "Hai să discutăm";
+    } else {
+      aboutText.textContent = "I am a full stack developer passionate about technology, with expertise in both front-end and back-end. I enjoy challenges that drive me to innovate and continuously evolve.";
+      talkBtn.textContent = "Let's Talk";
+    }
+
+    // 4. Skills
+    if (lang === "RO") {
+      skillsTitle.textContent = "</Abilități>";
+      skillsP1.textContent = "Salut! Numele meu este Elisei M. și sunt full stack developer. Îmi place să creez aplicații web de la zero și să le aduc la viață în browser. Lucrul atât cu front-end cât și cu back-end mi-a oferit o perspectivă completă asupra procesului de dezvoltare.";
+      skillsP2.textContent = "În prezent, mă concentrez pe proiecte care îmbină designul creativ cu funcționalitatea robustă. Îmi place să experimentez cu noi tehnologii și să găsesc soluții ingenioase pentru provocările de zi cu zi.";
+      skillsP3.textContent = "De asemenea, am o pasiune pentru învățare continuă și pentru împărtășirea cunoștințelor cu alți pasionați de tehnologie.";
+    } else {
+      skillsTitle.textContent = "</Skills>";
+      skillsP1.textContent = "Hi! My name is Elisei M., and I am a full stack developer. I love creating web applications from scratch and bringing them to life in the browser. Working with both front-end and back-end has given me a complete perspective on the development process.";
+      skillsP2.textContent = "Currently, I focus on projects that blend creative design with robust functionality. I enjoy experimenting with new technologies and finding ingenious solutions to everyday challenges.";
+      skillsP3.textContent = "I also have a passion for continuous learning and for sharing knowledge with other technology enthusiasts.";
+    }
   }
-};
 
-let currentLang = "en";
+  // Inițial EN
+  updateSiteText("EN");
 
-function updateTexts() {
-  document.querySelectorAll("[data-key]").forEach(element => {
-    const key = element.getAttribute("data-key");
-    if (translations[currentLang][key]) {
-      element.textContent = translations[currentLang][key];
+  // Toggle limbă
+  langToggle.addEventListener("click", function () {
+    if (langText.textContent.trim() === "EN") {
+      langText.textContent = "RO";
+      updateSiteText("RO");
+    } else {
+      langText.textContent = "EN";
+      updateSiteText("EN");
     }
   });
-  document.title = translations[currentLang]["pageTitle"];
-}
-
-document.getElementById("lang-toggle").addEventListener("click", () => {
-  currentLang = currentLang === "en" ? "ro" : "en";
-  updateTexts();
-  document.getElementById("lang-toggle").textContent = currentLang === "en" ? "Română" : "English";
 });
-
-updateTexts();

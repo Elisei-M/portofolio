@@ -157,7 +157,7 @@ body {
   line-height: 40px;
 }
 
-/* Keyframes anim */
+/* Keyframes */
 @keyframes opacity {
   0%, 100% { opacity: 0; }
   50% { opacity: 1; }

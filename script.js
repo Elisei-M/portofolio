@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Butonul de limbă și textul
+  // Buton limbă
   const langToggle = document.querySelector(".lang-toggle");
   const langText = document.querySelector(".lang-text");
 
-  // Navbar: selectăm fiecare link text
+  // Navbar
   const navHome = document.querySelector(".nav-home");
   const navAbout = document.querySelector(".nav-about");
   const navSkills = document.querySelector(".nav-skills");
@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Text animat
   const staticText = document.querySelector(".static-text");
   const dynamicItems = document.querySelectorAll(".dynamic-list__item");
-  const imText = document.querySelector(".im-text"); // "I'm"
+  const imText = document.querySelector(".im-text");
 
-  // Despre mine
+  // About Me
   const aboutText = document.querySelector(".about-text");
   const talkBtn = document.querySelector(".talk-btn");
 
@@ -25,7 +25,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const skillsP2 = document.querySelector(".skills-p2");
   const skillsP3 = document.querySelector(".skills-p3");
 
-  // Funcție care actualizează tot conținutul site-ului
+  // Projects
+  const projectsTitle = document.querySelector(".projects-title");
+  // Proiect 1
+  const project1Title = document.querySelector(".project1-title");
+  const project1Desc = document.querySelector(".project1-desc");
+  const project1Live = document.querySelector(".project1-live");
+  const project1Code = document.querySelector(".project1-code");
+
   function updateSiteText(lang) {
     // 1. Navbar
     if (lang === "RO") {
@@ -42,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
       navContact.textContent = "Contact";
     }
 
-    // 2. Textul animat
+    // 2. Text animat
     if (lang === "RO") {
       staticText.textContent = "Salut";
       dynamicItems[0].textContent = "lume !";
@@ -58,13 +65,13 @@ document.addEventListener("DOMContentLoaded", function () {
       dynamicItems[3].textContent = "everybody !";
       imText.textContent = "I'm";
     }
-    // Repornim animația pentru lista dinamică
+    // Repornim animația
     const dynamicList = document.querySelector(".dynamic-list");
     dynamicList.style.animation = "none";
     void dynamicList.offsetWidth;
     dynamicList.style.animation = "";
 
-    // 3. Despre mine
+    // 3. About Me
     if (lang === "RO") {
       aboutText.textContent = "Sunt un full stack developer pasionat de tehnologie, cu expertiză în front-end și back-end. Îmi plac provocările care mă determină să inovez și să evoluez constant.";
       talkBtn.textContent = "Hai să discutăm";
@@ -75,22 +82,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 4. Skills
     if (lang === "RO") {
-      skillsTitle.textContent = "</Despre mine>";
+      skillsTitle.textContent = "</Abilități>";
       skillsP1.textContent = "Salut! Numele meu este Elisei M. și sunt full stack developer. Îmi place să creez aplicații web de la zero și să le aduc la viață în browser. Lucrul atât cu front-end cât și cu back-end mi-a oferit o perspectivă completă asupra procesului de dezvoltare.";
       skillsP2.textContent = "În prezent, mă concentrez pe proiecte care îmbină designul creativ cu funcționalitatea robustă. Îmi place să experimentez cu noi tehnologii și să găsesc soluții ingenioase pentru provocările de zi cu zi.";
       skillsP3.textContent = "De asemenea, am o pasiune pentru învățare continuă și pentru împărtășirea cunoștințelor cu alți pasionați de tehnologie.";
     } else {
-      skillsTitle.textContent = "</About me>";
+      skillsTitle.textContent = "</Skills>";
       skillsP1.textContent = "Hi! My name is Elisei M., and I am a full stack developer. I love creating web applications from scratch and bringing them to life in the browser. Working with both front-end and back-end has given me a complete perspective on the development process.";
       skillsP2.textContent = "Currently, I focus on projects that blend creative design with robust functionality. I enjoy experimenting with new technologies and finding ingenious solutions to everyday challenges.";
       skillsP3.textContent = "I also have a passion for continuous learning and for sharing knowledge with other technology enthusiasts.";
     }
+
+    // 5. Projects
+    if (lang === "RO") {
+      projectsTitle.textContent = "</Proiecte>";
+      // Proiect 1
+      project1Title.textContent = "Pexelicons";
+      project1Desc.textContent = "O lume de iconițe personalizate pentru transformarea PC-ului tău într-o reflecție a stilului tău.";
+      project1Live.textContent = "Vezi Live";
+      project1Code.innerHTML = `<i class="fab fa-github"></i> GitHub`;
+    } else {
+      projectsTitle.textContent = "</Projects>";
+      // Proiect 1
+      project1Title.textContent = "Pexelicons";
+      project1Desc.textContent = "A world of personalized file folder icons to transform your PC into a reflection of your style.";
+      project1Live.textContent = "Live View";
+      project1Code.innerHTML = `<i class="fab fa-github"></i> GitHub`;
+    }
   }
 
-  // Setare inițială (limba EN)
+  // Inițial (EN)
   updateSiteText("EN");
 
-  // Evenimentul de toggle pentru limbă
+  // Toggle limbă
   langToggle.addEventListener("click", function () {
     if (langText.textContent.trim() === "EN") {
       langText.textContent = "RO";
